@@ -56,6 +56,10 @@
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 
+
+  uint16_t freq_divide;      //分频系数
+
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,6 +118,15 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
+  
+
+
+//  //开启频率
+//  HAL_TIM_Base_Start_IT(&htim1);
+//  HAL_TIM_OC_Start_IT(&htim1,TIM_CHANNEL_1);
+//  freq_divide=1999;                                                               //起始分频为1999+1=2000，168Mhz/2000=84Khz
+//  TIM1->ARR=freq_divide;                                                          //ARR:TIM auto-reload register
+//  htim1.Instance->CCR1=freq_divide/2;                                             //占空比50%
 
   /* USER CODE END 2 */
 
